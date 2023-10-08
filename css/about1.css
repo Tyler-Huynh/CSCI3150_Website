@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
+	color:white;
 }
 .hero{
 	height: 100vh;
@@ -71,19 +72,22 @@ nav ul li a:hover{
 	top: 50%;
 	left:8%;
 	transform: translateY(-50%);
-	
+	margin: 0 auto;
+
 }
+
 .content1{
 	margin-right: auto;
 	
 }
 h1{
 	color: white;
-	margin: 20px 0px 20px;
-	font-size: 75px;
+	font-size: 50px;
+	font-family: serif;
 }
+
 h3{
-	color: black;
+	color: white;
 	font-size: 25px;
 	margin-bottom: 50px;
 }
@@ -92,45 +96,7 @@ h4{
 	letter-spacing: 2px;
 	font-size: 20px;
 }
-.newslatter form{
-	width: 380px;
-	max-width: 100%;
-	position: relative;
-}
-.newslatter form input:first-child{
-	display: inline-block;
-	width: 100%;
-	padding: 14px 130px 14px 15px;
-	border: 2px solid hotpink;
-	outline: none;
-	border-radius: 30px;
-}
-.newslatter form input:last-child{
-	position: absolute;
-	display: inline-block;
-	outline: none;
-	border: none;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color: hotpink;
-	color: white;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px; 
-}
 
-.about{
-	width: 100%;
-	padding: 100px 0px;
-	background-color: #191919;
-}
-.about img{
-	height: auto;
-	width: 430px;
-}
-.about-text{
-	width: 550px;
-}
 .main{
 	width: 1130px;
 	max-width: 95%;
@@ -138,36 +104,29 @@ h4{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	.h1{
-		font-family: serif;
-	}
+	margin: 0 auto;
 }
-.about-text h2{
-	color: white;
-	font-size: 75px;
-	text-transform: capitalize;
+.float-container {
+	padding: 20px;
+	justify-content: center;
+}
+
+.float-child {
+	padding: 10px;
+    width: 50%;
+    float: left;
+}  
+.content-text h2{
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-family: sans-serif;
 	margin-bottom: 20px;
+	font-size: 20px;
+
 }
-.about-text h5{
-	color: white;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-.about-text p{
-	color: red;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
-}
-.aboutmore{
-	width: 100%;
-	padding: 100px 0px;
-	background-color: black;
-}
-.about
+
+
 button{
 	background-color:hotpink;
 	color: white;
