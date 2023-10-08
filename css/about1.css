@@ -9,7 +9,7 @@
 	width: 100%;
 	background-size:100%;
 	background-position: center;
-	background-color: white;
+	background-color: black;
 }
 nav{
 	display: flex;
@@ -71,6 +71,7 @@ nav ul li a:hover{
 	top: 50%;
 	left:8%;
 	transform: translateY(-50%);
+	
 }
 .content1{
 	margin-right: auto;
@@ -82,12 +83,12 @@ h1{
 	font-size: 75px;
 }
 h3{
-	color: white;
+	color: black;
 	font-size: 25px;
 	margin-bottom: 50px;
 }
 h4{
-	color:white;
+	color: black;
 	letter-spacing: 2px;
 	font-size: 20px;
 }
@@ -137,6 +138,9 @@ h4{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	.h1{
+		font-family: serif;
+	}
 }
 .about-text h2{
 	color: white;
