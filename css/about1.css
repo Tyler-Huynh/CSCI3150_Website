@@ -100,7 +100,16 @@ nav ul li a:hover{
 .float-child {
     width: 50%;
     float: left;
+	
 }  
+.float-child-new-right {
+    width: 50%;
+    float: left;
+}  
+
+.float-child-new-left{
+    float: left;
+}
 .content-text{
 	width: 1050px;
 	margin: 0 auto;
@@ -137,7 +146,6 @@ nav ul li a:hover{
 .about-text h2{
 	color: white;
 	font-size: 20px;
-	text-transform: capitalize;
 	margin-bottom: 20px;
 	font-family: sans-serif;
 }
