@@ -72,9 +72,13 @@ nav ul li a:hover{
 	
 }
 h1{
-	color: white;
-	margin: 20px 0px 20px;
+	color: black;
 	font-size: 75px;
+	margin-left: 270px;
+}
+.body-title{
+	color: white;
+	display: none;
 }
 h3{
 	color: white;
