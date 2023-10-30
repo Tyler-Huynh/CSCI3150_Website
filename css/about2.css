@@ -96,7 +96,7 @@ h4{
 	margin-right: auto;
 }
 
-.about{
+.table-form{
 	width: 100%;
 	padding: 100px 0px;
 	background-color: white;
@@ -183,7 +183,7 @@ table {
 	padding: 100px 0px;
 	background-color: black;
 }
-.about
+.table-form
 button{
 	background-color:hotpink;
 	color: white;

@@ -26,184 +26,183 @@
 			</ul>
 		</nav>
 	</div>
-	<section class="about">
+	<section class="table-form">
 		<h1>Table and Form</h1>
 		<div class="anchor">
-			<a href="#recently-played" style="margin-left: 266px;">Recently Played Games</a>
 			<br>
-			<a href="#myform" style="margin-left: 266px;" type="button">Input your Info</a>
+			<a href="#main-content" style="margin-left: 266px;" type="button">Skip to Main Content</a>
 		</div>
+			<main id="main-content">
+				<div class="main">
+					<table style="border: 1;">
+						<caption id="recently-played">Recently Played Games</caption>
+						<thead>
+							<tr>
+								<th scope="col">Game</th>
+								<th scope="col">Developer</th>
+								<th scope="col">Last Played</th>
+								<th scope="col">Total Time Played</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Grand Theft Auto 5</th>
+								<td>Rockstar Games</td>
+								<td>69 Hrs</td>
+								<td>1825 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">Cyberpunk 2077</th>
+								<td>CD Projekt Red</td>
+								<td>10 Hrs</td>
+								<td>217 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">The Sims 4</th>
+								<td>Maxis</td>
+								<td>3 Hrs</td>
+								<td>45 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">Minecraft</th>
+								<td>Mojang</td>
+								<td>89 Hrs</td>
+								<td>3456 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">Wii Sports</th>
+								<td>Nintendo</td>
+								<td>178 Hrs</td>
+								<td>234 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">Super Mario Bros</th>
+								<td>Nintendo</td>
+								<td>8 Hrs</td>
+								<td>106 Hrs</td>
+							</tr>
+							<tr>
+								<th scope="row">Call of Duty</th>
+								<td>Multiple Developers</td>
+								<td>12 Hrs</td>
+								<td>60 Hrs</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="main-form">
+					<form id="myform" method="post" style="margin-top: 15px; margin-right:auto; margin-left: auto; width: 600px;">
+						<legend style="margin-bottom: 10px;">Give us your information!</legend>
+							<fieldset>
+								<div class="form-group">
+								<label>
+								First Name
+									<input
+										type="text"
+										class="form-control"
+										name="firstName"
+										id="firstName"
+										placeholder="First Name"
+										required
+										style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 68px;"
+									/>
+								</label>
+								</div>
+								<div class="form-group">
+								<label>
+								Last Name
+									<input
+										type="text"
+										id="lastName"
+										class="form-control"
+										name="lastName"
+										placeholder="Last Name"
+										required="required"
+										style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 69px;"
+									/>
 		
-		<div class="main">
-			<table style="border: 1;">
-				<caption id="recently-played">Recently Played Games</caption>
-				<thead>
-					<tr>
-						<th scope="col">Game</th>
-						<th scope="col">Developer</th>
-						<th scope="col">Last Played</th>
-						<th scope="col">Total Time Played</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row">Grand Theft Auto 5</th>
-						<td>Rockstar Games</td>
-						<td>69 Hrs</td>
-						<td>1825 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">Cyberpunk 2077</th>
-						<td>CD Projekt Red</td>
-						<td>10 Hrs</td>
-						<td>217 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">The Sims 4</th>
-						<td>Maxis</td>
-						<td>3 Hrs</td>
-						<td>45 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">Minecraft</th>
-						<td>Mojang</td>
-						<td>89 Hrs</td>
-						<td>3456 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">Wii Sports</th>
-						<td>Nintendo</td>
-						<td>178 Hrs</td>
-						<td>234 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">Super Mario Bros</th>
-						<td>Nintendo</td>
-						<td>8 Hrs</td>
-						<td>106 Hrs</td>
-					</tr>
-					<tr>
-						<th scope="row">Call of Duty</th>
-						<td>Multiple Developers</td>
-						<td>12 Hrs</td>
-						<td>60 Hrs</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="main-form">
-			<form id="myform" method="post" style="margin-top: 15px; margin-right:auto; margin-left: auto; width: 600px;">
-				<legend style="margin-bottom: 10px;">Give us your information!</legend>
-					<fieldset>
-						<div class="form-group">
-						<label>
-						First Name
-							<input
-								type="text"
-								class="form-control"
-								name="firstName"
-								id="firstName"
-								placeholder="First Name"
-								required
-								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 68px;"
-							/>
-						</label>
-						</div>
-						<div class="form-group">
-						<label>
-						Last Name
-							<input
-								type="text"
-								id="lastName"
-								class="form-control"
-								name="lastName"
-								placeholder="Last Name"
-								required="required"
-								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 69px;"
-							/>
-
-						</label>
-						</div>
-						<div class="form-group">
-							<label>
-								Email Address
-								<input
-									type="text"
-									id="email"
-									class="form-control"
-									name="email"
-									placeholder="Email Address"
-									required="required"
-									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 44px;"
-								/>
-							</label>
-						</div>
-						<div class="form-group">
-							<label>
-								Phone Number
-								<input
-									type="text"
-									id="phoneNumber"
-									class="form-control"
-									name="phoneNumber"
-									placeholder="Phone Number"
-									required="required"
-									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 38px;"
-									pattern="(?=.*\d)"
-								/>
-							</label>
-						</div>
-						
-						<div class="form-group">
-							<label>
-								New Password
-								<input
-									id="psw"
-									type="password"
-									class="form-control"
-									name="password"
-									placeholder="Password"
-									required="required"
-									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 40px;"
-								/>
-							</label>
-						</div>
-						<div class="form-group">
-							<label>
-								Confirm Password 
-								<input
-									id="cpsw"
-									type="password"
-									class="form-control"
-									name="confirm password"
-									placeholder="Confirm Password"
-									required="required"
-									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 15px;"
-								/>
-							</label>
-						</div>
-						<div class="form-group">
-							<input type="submit">
-						</div>
-
-						<div class ="center text-center" >
-							<div id="message" style="display: block">
-								<h3 style="color: black; font-size: 17px;">Password must contain the following:</h3>
-								<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-								<p id="capital" class="invalid">
-								A <b>capital (uppercase)</b> letter
-								</p>
-								<p id="number" class="invalid">A <b>number</b></p>
-								<p id="symbol" class="invalid">A <b>symbol</b> "!@#$%^&*()".</p>
-								<p id="length" class="invalid">Minimum <b>12 characters</b></p>
-								<p id="match" class="invalid">
-								Password and Confirm Password Match
-								</p>
-							</div>
-						</div>
-				</fieldset>
-	  		</form>
-			
+								</label>
+								</div>
+								<div class="form-group">
+									<label>
+										Email Address
+										<input
+											type="text"
+											id="email"
+											class="form-control"
+											name="email"
+											placeholder="Email Address"
+											required="required"
+											style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 44px;"
+										/>
+									</label>
+								</div>
+								<div class="form-group">
+									<label>
+										Phone Number
+										<input
+											type="text"
+											id="phoneNumber"
+											class="form-control"
+											name="phoneNumber"
+											placeholder="Phone Number"
+											required="required"
+											style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 38px;"
+											pattern="(?=.*\d)"
+										/>
+									</label>
+								</div>
+								
+								<div class="form-group">
+									<label>
+										New Password
+										<input
+											id="psw"
+											type="password"
+											class="form-control"
+											name="password"
+											placeholder="Password"
+											required="required"
+											style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 40px;"
+										/>
+									</label>
+								</div>
+								<div class="form-group">
+									<label>
+										Confirm Password 
+										<input
+											id="cpsw"
+											type="password"
+											class="form-control"
+											name="confirm password"
+											placeholder="Confirm Password"
+											required="required"
+											style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 15px;"
+										/>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="submit">
+								</div>
+		
+								<div class ="center text-center" >
+									<div id="message" style="display: block">
+										<h3 style="color: black; font-size: 17px;">Password must contain the following:</h3>
+										<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+										<p id="capital" class="invalid">
+										A <b>capital (uppercase)</b> letter
+										</p>
+										<p id="number" class="invalid">A <b>number</b></p>
+										<p id="symbol" class="invalid">A <b>symbol</b> "!@#$%^&*()".</p>
+										<p id="length" class="invalid">Minimum <b>12 characters</b></p>
+										<p id="match" class="invalid">
+										Password and Confirm Password Match
+										</p>
+									</div>
+								</div>
+						</fieldset>
+					</form>
+			</main>	
 		</div>
 	</section>
 	
