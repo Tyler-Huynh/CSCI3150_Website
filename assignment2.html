@@ -9,8 +9,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <script src="js/lab3.js"></script>
+
 </head>
-<body class="assignment2-page">
+<body class="assignment2-page" onload="labLogin()">
 	<h1 class="body-title">Assignment 2</h1>
 	<!----hero Section start---->
 	<div class="hero">
@@ -91,86 +93,115 @@
 		</div>
 		<div class="main-form">
 			<form id="myform" method="post" style="margin-top: 15px; margin-right:auto; margin-left: auto; width: 600px;">
-				  <legend style="margin-bottom: 10px;">Give us your information!</legend>
-	  
-				  <div class="form-group">
-					<label>
-					First Name
-						<input
-							type="text"
-							class="form-control"
-							name="firstName"
-							placeholder="First Name"
-							required="required"
-							style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 68px;"
-						/>
-					</label>
-				  </div>
-				  <div class="form-group">
-					<label>
-					Last Name
-						<input
-							type="text"
-							class="form-control"
-							name="lastName"
-							placeholder="Last Name"
-							required="required"
-							style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 69px;"
-						/>
+				<legend style="margin-bottom: 10px;">Give us your information!</legend>
+					<fieldset>
+						<div class="form-group">
+						<label>
+						First Name
+							<input
+								type="text"
+								class="form-control"
+								name="firstName"
+								id="firstName"
+								placeholder="First Name"
+								required
+								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 68px;"
+							/>
+						</label>
+						</div>
+						<div class="form-group">
+						<label>
+						Last Name
+							<input
+								type="text"
+								id="lastName"
+								class="form-control"
+								name="lastName"
+								placeholder="Last Name"
+								required="required"
+								style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 69px;"
+							/>
 
-					</label>
-				  </div>
-				  <div class="form-group">
-					<label>
-						Email Address
-						<input
-							type="text"
-							class="form-control"
-							name="email"
-							placeholder="Email Address"
-							required="required"
-							style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 44px;"
-					  	/>
-					</label>
-					</div>
-				  <div class="form-group">
-					<label>
-						New Password
-						<input
-							id="psw"
-							type="password"
-							class="form-control"
-							name="password"
-							placeholder="Password"
-							required="required"
-							style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 40px;"
-						/>
-					</label>
-				  </div>
-				  <div class="form-group">
-					<label>
-						Confirm Password 
-						<input
-							id="cpsw"
-							type="password"
-							class="form-control"
-							name="confirm password"
-							placeholder="Confirm Password"
-							required="required"
-							style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 15px;"
-						/>
-					</label>
-				  </div>
-				  <div class="form-group">
-					<button
-					  id="my_submit_button"
-					  class="btn btn-dark btn-block login-btn"
-					  disabled
-					  style="background-color: bisque; color: black;"
-					>
-					  Submit
-					</button>
-				  </div>
+						</label>
+						</div>
+						<div class="form-group">
+							<label>
+								Email Address
+								<input
+									type="text"
+									id="email"
+									class="form-control"
+									name="email"
+									placeholder="Email Address"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 44px;"
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<label>
+								Phone Number
+								<input
+									type="text"
+									id="phoneNumber"
+									class="form-control"
+									name="phoneNumber"
+									placeholder="Phone Number"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 38px;"
+									pattern="(?=.*\d)"
+								/>
+							</label>
+						</div>
+						
+						<div class="form-group">
+							<label>
+								New Password
+								<input
+									id="psw"
+									type="password"
+									class="form-control"
+									name="password"
+									placeholder="Password"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 40px;"
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<label>
+								Confirm Password 
+								<input
+									id="cpsw"
+									type="password"
+									class="form-control"
+									name="confirm password"
+									placeholder="Confirm Password"
+									required="required"
+									style="width: 300px; height: 30px; margin-bottom: 15px; margin-left: 15px;"
+								/>
+							</label>
+						</div>
+						<div class="form-group">
+							<input type="submit">
+						</div>
+
+						<div class ="center text-center" >
+							<div id="message" style="display: block">
+								<h3 style="color: black; font-size: 17px;">Password must contain the following:</h3>
+								<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+								<p id="capital" class="invalid">
+								A <b>capital (uppercase)</b> letter
+								</p>
+								<p id="number" class="invalid">A <b>number</b></p>
+								<p id="symbol" class="invalid">A <b>symbol</b> "!@#$%^&*()".</p>
+								<p id="length" class="invalid">Minimum <b>12 characters</b></p>
+								<p id="match" class="invalid">
+								Password and Confirm Password Match
+								</p>
+							</div>
+						</div>
+				</fieldset>
 	  		</form>
 			
 		</div>
