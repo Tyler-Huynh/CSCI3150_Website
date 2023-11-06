@@ -1,52 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Skip Navigation Material Icons</title>
-  <link href="css/skip.css" rel="stylesheet">
+    <title>Blog Page with Responsive CSS Grid and Navbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "aside-left"
+                "aside-right"
+                "footer";
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content {
+            grid-area: main;
+            padding: 20px;
+        }
+
+        .aside-left {
+            grid-area: aside-left;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .aside-right {
+            grid-area: aside-right;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            /* For tablets and larger screens */
+            .container {
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-areas:
+                    "aside-left main aside-right"
+                    "aside-left main aside-right";
+            }
+        }
+
+        @media (max-width: 767px) {
+            /* For phones */
+            .container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside-left"
+                    "aside-right"
+                    "footer";
+            }
+        }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#maincontent">Skip to main content</a>
-<header>
-  <h1>Skip navigation and material icon examples</h1>
-</header>
-<nav>
-  <ul>
-    <li><a href="#one">one</a> <span aria-hidden=”true” class="material-icons">accessible</span></li>
-    <li><a href="#two">two</a> <span aria-hidden=”true” class="material-icons">accessibility</span></li>
-    <li><a href="#three">three</a> <span aria-hidden=”true” class="material-icons">accessible</span></li>
-    <li><a href="#four">four</a> <span aria-hidden=”true” class="material-icons">accessibility</span></li>
-    <li><a href="#five">five</a> <span aria-hidden=”true” class="material-icons">accessible</span></li>
-  </ul>
-</nav>
-<main id="maincontent">
-  <section id="one">
-    <h2>one</h2>
-    <span aria-hidden=”true” class="material-icons">face</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatum totam vero quia alias voluptatibus, nam delectus nobis numquam distinctio enim doloremque, minus libero modi itaque magni. Quo, eum, beatae.</p>
-  </section>
-  <section id="two">
-    <h2>two</h2>
-    <span aria-hidden=”true” class="material-icons">face face</span>
-    <p>Sit quidem accusantium, dicta inventore esse nihil debitis quaerat explicabo delectus quia assumenda, officiis nam, natus nisi cum quo dignissimos laboriosam, recusandae quisquam! Voluptas magnam, a officiis cumque tempora in!</p>
-  </section id="one">
-  <section id="three">
-    <h2>three</h2>
-    <span aria-hidden=”true” class="material-icons">face face face</span>
-    <p>Fugit modi natus facere voluptatibus harum. Et reprehenderit accusantium iusto optio numquam. Temporibus libero repellat alias, veniam dolore omnis dolorem tempore error, laborum tenetur praesentium, voluptas ipsam? Alias, tempore, ullam.</p>
-  </section>
-  <section id="four">
-    <h2>four</h2>
-    <span aria-hidden=”true” class="material-icons">face face face face</span>
-    <p>Alias perspiciatis, sapiente consequuntur dolores quam vel itaque consectetur commodi possimus aut hic eius iusto ex quasi repellendus praesentium, officiis atque saepe, non iure natus! Magni cupiditate quo, corrupti placeat?</p>
-  </section>
-  <section id="five">
-    <h2>five</h2>
-    <span aria-hidden=”true” class="material-icons">face face face face face</span>
-    <p>Suscipit, similique! Repellendus sint tempora debitis id, quod dolor voluptatibus laboriosam iste deleniti blanditiis eius et, cumque, ab minus quis natus nihil culpa facilis laborum deserunt provident! Quo, numquam, quas!</p>
-  </section>
-</main>
+    <header>
+        <h1>Blog Page with Responsive CSS Grid and Navbar</h1>
+    </header>
+
+    <nav>
+        <h1>My Blog</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content of the blog post.</p>
+        </div>
+
+        <div class="aside-left">
+            <h2>Left Sidebar</h2>
+            <p>This is the content for the left sidebar.</p>
+        </div>
+
+        <div class="aside-right">
+            <h2>Right Sidebar</h2>
+            <p>This is the content for the right sidebar.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Blog Page with Responsive CSS Grid and Navbar
+    </footer>
 </body>
 </html>
