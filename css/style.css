@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 *{
 	padding: 0;
 	margin: 0;
@@ -6,14 +7,22 @@
 }
 
 body{
-	font-family:fantasy;
+	font-family: 'Courier New', Courier, monospace;
 }
 .hero{
 	height: 100vh;
 	width: 100%;
-	background-image: url(../img/split.gif);
+	background-image: url(../img/cry.gif);
 	background-size: cover;
 	background-position: center;
+}
+
+h1,
+h2,
+h3,
+th,
+legend {
+    font-family: "Roboto Mono", serif;
 }
 
 .sr-only {
@@ -68,19 +77,6 @@ nav ul li a:hover{
 	color:pink;
 	transition: .4s;
 }
-.btn{
-	background-color:wheat;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-	border-radius: 30px;
-	transition: transform .4s; 
-}
-.btn:hover{
-	transform: scale(1.2);
-}
 .content{
 	position: absolute;
 	top: 50%;
@@ -89,8 +85,8 @@ nav ul li a:hover{
 }
 .typewriter h1 {
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	color: white;
-	border-right: .15em solid white; /* The typwriter cursor */
+	color: red;
+	border-right: .15em solid red; /* The typwriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: .15em; /* Adjust as needed */
@@ -117,7 +113,7 @@ h3{
 	margin-bottom: 50px;
 }
 h4{
-	color:white;
+	color:red;
 	letter-spacing: 2px;
 	font-size: 45px;
 }
@@ -147,6 +143,27 @@ h4{
 	color: white;
 	width: 1050px;
 	margin: 0 auto;
+}
+
+.about-text-continue h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.about-text-continue h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.about-text-continue p{
+	color: #fcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
 }
 
 .main{
