@@ -1,156 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Blog Page with Responsive CSS Grid and Navbar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Typing Header</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            grid-area: header;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: #444;
-            color: #fff;
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            padding: 10px;
+            justify-content: center;
+            height: 100vh;
         }
 
-        nav h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .container {
-            display: grid;
-            grid-template-areas:
-                "header"
-                "nav"
-                "main"
-                "aside-left"
-                "aside-right"
-                "footer";
-            max-width: 1000px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .main-content {
-            grid-area: main;
-            padding: 20px;
-        }
-
-        .aside-left {
-            grid-area: aside-left;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .aside-right {
-            grid-area: aside-right;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        footer {
-            grid-area: footer;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+        .header {
             text-align: center;
         }
 
-        @media (min-width: 768px) {
-            /* For tablets and larger screens */
-            .container {
-                grid-template-columns: 1fr 2fr 1fr;
-                grid-template-areas:
-                    "aside-left main aside-right"
-                    "aside-left main aside-right";
-            }
+        .typing-animation {
+            overflow: hidden;
+            border-right: 0.15em solid #333;
+            white-space: nowrap;
+            font-size: 2em;
+            display: inline-block;
+            vertical-align: middle;
         }
 
-        @media (max-width: 767px) {
-            /* For phones */
-            .container {
-                grid-template-areas:
-                    "header"
-                    "nav"
-                    "main"
-                    "aside-left"
-                    "aside-right"
-                    "footer";
-            }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .typing-animation {
+            animation: typing 3s steps(30) infinite;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Blog Page with Responsive CSS Grid and Navbar</h1>
-    </header>
-
-    <nav>
-        <h1>My Blog</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <main>
-            <h2>Main Content</h2>
-            <p>This is the main content of the webpage.</p>
-        </main>
-
-        <aside class="left-sidebar">
-            <h2>Left Sidebar</h2>
-            <p>This is the content for the left sidebar.</p>
-        </aside>
-
-        <aside class="right-sidebar">
-            <h2>Right Sidebar</h2>
-            <p>This is the content for the right sidebar.</p>
-        </aside>
+    <div class="header">
+        <h1>
+            <span class="typing-animation">Accessible Typing Header</span>
+        </h1>
     </div>
-
-    <footer>
-        &copy; 2023 Blog Page with Responsive CSS Grid and Navbar
-    </footer>
 </body>
 </html>
