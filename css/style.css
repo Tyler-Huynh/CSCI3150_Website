@@ -20,6 +20,29 @@
     width: 1px;
 }
 
+.skip-link {
+    position: absolute;
+    left: 10px;
+    top: -40px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background-color: #FFDEDC;
+    color: #CF0A00;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 10px;
+    opacity: 1;
+}
+
+
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
